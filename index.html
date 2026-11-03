@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <!-- 1. The Screen Elements -->
+  <h1>My First Game</h1>
+  <p>Score: <span id="score">0</span></p>
+  
+  <!-- This is the button you will tap -->
+  <button id="gameButton" style="font-size: 50px;">🔴</button>
+
+  <!-- 2. The Game Logic -->
+  <script>
+    // Create a variable to hold the starting score
+    let count = 0;
+
+    // Find the button and the score display on the screen
+    const button = document.getElementById("gameButton");
+    const display = document.getElementById("score");
+
+    // Tell the computer what to do when someone clicks the button
+    button.addEventListener("click", function() {
+      count = count + 1;       // Add 1 point to the score
+      display.innerText = count; // Show the new score on the screen
+    });
+  </script>
+
+</body>
+</html>
